@@ -1,46 +1,30 @@
-/*let lists = JSON.parse(localStorage.getItem('records')) ?
-    JSON.parse(localStorage.getItem('records')) :
-
-    [{
+const products = JSON.parse(localStorage.getItem('id')) ?
+    JSON.parse(localStorage.getItem('id')) : [{
         id: 1,
-        item: 'TV Stand',
-        createdDate: new Date()
+        item: 'Samsung',
+        createDate: new Date()
     }];
 
+function addItems() {}
+// Load data
+function readItems() {
+    console.log(lists);
+    let contents = document.querySelector('#');
+    contents.innerHTML = "";
+    lists.forEach((item, index) => {
+        document.querySelector('#').innerHTML +=
+            contents.innerHTML +=
+            `
+        <li class="bg-gradient list-unstyled" id="${index}">
+        <input type="checkbox" onclick="itemCompleted(${index})" class="chkItem form-check-input">
+function readItems() {
+        `;
+    })
+};
 
-function addData(name, item, date)(item) => {
-    {
-        // e.preventDefault();
-        lists.push({
-            id: document.getElementById('[]').value,
-            item: document.getElementById('[]').value,
-            createdDate: document.getElementsByName('[]').Date,
-            return: function addData()
-            co
-        })
-    };
-    // Save data to a localstorage
-    localStorage.setItem('records', JSON.stringify(lists));
-}
-document.querySelector('#addRecord').addEventListener('click', addData);
-// Displaying data
-(function loadData() {
-    console.table(lists);
-})();*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*function priceSort() {
-    let direction = document.querySelector('#priceSort')
-    let sortedProducts = produt.sort((a, b) => a.price - b.price);
-}*/
+const btnAddItem = document.querySelector('#addItem');
+btnAddItem.addEventListener('click', addItems);
+document.querySelector('#sorting').addEventListener('click', () => {
+    localStorage.setItem('items', JSON.stringify(lists));
+    readItems();
+});

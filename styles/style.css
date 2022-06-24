@@ -1,0 +1,8 @@
+                const viewProducts=products=> {
+                products.forEach((product=> {
+                    productsContainer.innerHTML +=` <div class="product"> <h3>$ {
+                        item.tittle
+                    }
+                    </h3> </div>`
+                }
+                ))
