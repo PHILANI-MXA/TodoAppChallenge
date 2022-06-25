@@ -29,7 +29,7 @@ todoForm.addEventListener('submit', function(event) {
 let todos = [];
 
 function addTodo(item) {
-    const task = document.querySelector('#Todo').value;
+    const task = document.getElementsByClassName('.to-do-form').value;
     const Todo = {
         item: task,
         id: Todo.length + 1,
@@ -39,7 +39,7 @@ function addTodo(item) {
             id: s4(),
             item: item,
             createdDate: new Date(),
-            isCompleted: false
+            isCompleted: False
         };
 
         todos.push(todo);
