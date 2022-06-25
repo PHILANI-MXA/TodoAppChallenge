@@ -13,7 +13,7 @@
 
 <body>
     <div class="to-do-form">
-        <form class="form-horizontal" onSubmit={this.handleSubmit}>
+        <form class="form-horizontal" onSubmit="$">
             <div class="row">
                 <div class="col-3 col-form-label ">
                     <button type="submit" class="btn btn-primary btn-lg">
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="form-group row to-do-list">
-
+                <ul id="Todo"></ul>
             </div>
         </form>
     </div>

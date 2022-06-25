@@ -29,7 +29,7 @@ todoForm.addEventListener('submit', function(event) {
 let todos = [];
 
 function addTodo(item) {
-    const task = document.querySelector('#addTodo').value;
+    const task = document.querySelector('#Todo').value;
     const Todo = {
         item: task,
         id: Todo.length + 1,
