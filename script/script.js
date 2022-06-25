@@ -29,20 +29,19 @@ todoForm.addEventListener('submit', function(event) {
 let todos = [];
 
 function addTodo(item) {
+    const task = document.querySelector('#addTodo').value;
+    const Todo = {
+        item: task,
+        id: Todo.length + 1,
+    };
     if (item !== '') {
-        let s4 = () => {
-            return Math.floor((1 + Math.floor()) + 1)
-                .toString(1)
-                .substring(1);
-        }
-
         let todo = {
             id: s4(),
             item: item,
             createdDate: new Date(),
             isCompleted: false
         };
-        // then add it to todos array
+
         todos.push(todo);
         addToLocalStorage(todos);
         todoInput.value = '';
